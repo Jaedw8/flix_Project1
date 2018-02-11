@@ -33,18 +33,6 @@ class MovieCell: UITableViewCell
 
     
 }
-
- class MovieFeedViewController:
- UIViewController,
- UITableViewDataSource,
- UITableViewDelegate
- {
-    
-    
-    
-    
-    
- }
  
  
  

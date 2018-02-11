@@ -16,7 +16,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
     var movies: [[String: Any]] = []
     var refreshControl: UIRefreshControl!
     
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     
     override func viewDidLoad()
@@ -31,10 +32,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
         
         tableView.rowHeight = 200
         tableView.dataSource = self
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
         fetchMovies()
         
-
-       
+        
+        
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl)
@@ -69,6 +73,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
                 let movies = dataDictionary["results"] as! [[String:Any]]
                 self.movies = movies
                 self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
                 self.refreshControl.endRefreshing()
                 
                 
@@ -76,7 +81,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
         }
         task.resume()
     }
-
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
@@ -84,7 +89,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-    
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
         
@@ -107,14 +112,26 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
     }
     
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell)
+        {
+            let movie = movies[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        }
+        
+    }
+    
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     
 }
