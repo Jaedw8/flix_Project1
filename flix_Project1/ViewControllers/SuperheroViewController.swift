@@ -35,14 +35,14 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
         
     }
     
-    func  collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func  collectionView(_ collentionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return movies.count
         
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)  -> UICollectionViewCell
+    func collectionView(_ collentionView: UICollectionView, cellForItemAt indexPath: IndexPath)  -> UICollectionViewCell
     {
         
         
