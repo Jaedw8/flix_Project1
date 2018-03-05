@@ -7,7 +7,9 @@ target 'flix_Project1' do
 
   # Pods for flix_Project1
 
+  pod 'Alamofire', '~> 4.7'
   pod 'AlamofireImage', '~> 3.3'
+  pod 'PKHUD', '~> 4.0'
 
   target 'flix_Project1Tests' do
     inherit! :search_paths

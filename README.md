@@ -8,6 +8,11 @@ Time spent: **6** hours spent in total
 
 The following **required** user stories are complete:
 
+- [x] Create a movie model (+2pt)
+- [x] Implement the movie model (+2pt)
+- [x] Implement property observers (+2pt)
+- [x] Create a basic API Client (+2pt)
+
 - [x] User sees app icon in home screen and styled launch screen (+1pt)
 - [x] User can scroll through a list of movies currently playing in theaters from The Movie DB API (+5pt)
 - [x] User can "Pull to refresh" the movie list (+2pt)

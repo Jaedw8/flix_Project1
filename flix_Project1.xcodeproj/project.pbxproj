@@ -18,6 +18,8 @@
 		A11E5071202613A500831CBC /* flix_Project1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E5070202613A500831CBC /* flix_Project1UITests.swift */; };
 		A11E507F202627EE00831CBC /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E507E202627EE00831CBC /* NowPlayingViewController.swift */; };
 		A11E50812027F1D400831CBC /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E50802027F1D400831CBC /* MovieCell.swift */; };
+		A143494E204E01C100A3AFD7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143494D204E01C100A3AFD7 /* Movie.swift */; };
+		A1434950204E0A8200A3AFD7 /* MovieApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143494F204E0A8200A3AFD7 /* MovieApiManager.swift */; };
 		A18812542030DD2200DCE31F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18812532030DD2200DCE31F /* DetailViewController.swift */; };
 		A192CCF72030F8BB0016327B /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192CCF62030F8BB0016327B /* PosterCell.swift */; };
 		A192CCF92030F9420016327B /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192CCF82030F9420016327B /* SuperheroViewController.swift */; };
@@ -62,6 +64,8 @@
 		A11E5072202613A500831CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11E507E202627EE00831CBC /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		A11E50802027F1D400831CBC /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		A143494D204E01C100A3AFD7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A143494F204E0A8200A3AFD7 /* MovieApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiManager.swift; sourceTree = "<group>"; };
 		A18812532030DD2200DCE31F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A192CCF62030F8BB0016327B /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		A192CCF82030F9420016327B /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		A11E5044202613A400831CBC = {
 			isa = PBXGroup;
 			children = (
+				A143494D204E01C100A3AFD7 /* Movie.swift */,
 				A11E504F202613A500831CBC /* flix_Project1 */,
 				A11E5064202613A500831CBC /* flix_Project1Tests */,
 				A11E506F202613A500831CBC /* flix_Project1UITests */,
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A11E507E202627EE00831CBC /* NowPlayingViewController.swift */,
+				A143494F204E0A8200A3AFD7 /* MovieApiManager.swift */,
 				A18812532030DD2200DCE31F /* DetailViewController.swift */,
 				A192CCF82030F9420016327B /* SuperheroViewController.swift */,
 			);
@@ -419,11 +425,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-flix_Project1/Pods-flix_Project1-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -488,10 +496,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A143494E204E01C100A3AFD7 /* Movie.swift in Sources */,
 				A11E507F202627EE00831CBC /* NowPlayingViewController.swift in Sources */,
 				A192CCF72030F8BB0016327B /* PosterCell.swift in Sources */,
 				A192CCF92030F9420016327B /* SuperheroViewController.swift in Sources */,
 				A11E5051202613A500831CBC /* AppDelegate.swift in Sources */,
+				A1434950204E0A8200A3AFD7 /* MovieApiManager.swift in Sources */,
 				A11E50812027F1D400831CBC /* MovieCell.swift in Sources */,
 				A18812542030DD2200DCE31F /* DetailViewController.swift in Sources */,
 			);
