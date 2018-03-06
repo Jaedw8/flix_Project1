@@ -14,7 +14,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
 {
     @IBOutlet weak var tableView: UITableView!
     
-    var movies: [[String: Any]] = []
+    var movies: [Movie] = []
     var refreshControl: UIRefreshControl!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -97,11 +97,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource
         {
             let movie = movies[indexPath.row]
             let detailViewController = segue.destination as! DetailViewController
-            detailViewController.movie = movie
+            detailViewController.movie = movie 
         }
         
     }
-    
     
     override func didReceiveMemoryWarning()
     {

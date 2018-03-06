@@ -35,7 +35,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UILabel!
     
     
-    var movie: [String: Any]?
+    var movie: Movie!
     
     
     
@@ -48,23 +48,26 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
    
-        if let movie = movie { titleLabel.text = movie[MovieKeys.title] as? String
+        if let movie = movie { titleLabel.text = movie.title //[MovieKeys.title] as? String
             
-            releaseDateLabel.text = movie["release_date"] as? String
-            overviewLabel.text = movie["overview"] as? String
+            releaseDateLabel.text = movie.releaseDate//["release_date"] as? String
+            overviewLabel.text = movie.overview//["overview"] as? String
             
             
-            let backdropPathString = movie[MovieKeys.backdropPath] as! String
+           // let backdropPathString = movie.[MovieKeys.backdropPath] as! String
             
-            let posterPathString = movie[MovieKeys.postperPath] as! String
+            //let posterPathString = movie[MovieKeys.postperPath] as! String
             
-            let baseURLString = "https://image.tmdb.org/t/p/w500"
-            
-            let backdropURL = URL(string: baseURLString + backdropPathString)!
-            backDropImageView.af_setImage(withURL: backdropURL)
-            
-            let posterPathURl = URL(string: baseURLString + posterPathString)!
-            posterImageView.af_setImage(withURL: posterPathURl)
+            backDropImageView.af_setImage(withURL: movie.backdropURL!)
+            posterImageView.af_setImage(withURL: movie.posterPathURL!)
+
+//            let baseURLString = "https://image.tmdb.org/t/p/w500"
+//
+//            let backdropURL = URL(string: baseURLString + backdropPathString)!
+//            backDropImageView.af_setImage(withURL: backdropURL)
+//
+//            let posterPathURl = URL(string: baseURLString + posterPathString)!
+//            posterImageView.af_setImage(withURL: posterPathURl)
         }
         
     }
